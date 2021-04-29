@@ -35,7 +35,7 @@ function [v_filtered] = ACSR_filter(v_rest,v_target,Ws)
 
 [mmags,~] = ACSR_init(v_rest,Ws);
 overlap=round(Ws/2);
-ev=Window_division(v_target,Ws,overlap);% v shape 상관 없음
+ev=Window_division(v_target,Ws,overlap);
 fv=[];
 for tt=1:size(ev,2)
     comp=Artifact_removal(ev(:,tt),'ind_app',mmags);    
