@@ -7,9 +7,9 @@ emg_filtered=ACSR_filter(emg_for_training,emg,ACSR_window);
 
 subplot(2,1,1);
     plot(time,emg,'b');hold on;
-    xlabel('Time [S]');ylabel('Amplitude [mV]');
+    xlabel('Time [s]');ylabel('Amplitude [mV]');
     title('Raw','fontsize',12,'fontweight','bold');
 subplot(2,1,2);
     plot(time,emg_filtered,'r');
-    xlabel('Time [S]');ylabel('Amplitude [mV]');
+    xlabel('Time [s]');ylabel('Amplitude [mV]');
     title('Filtered','fontsize',12,'fontweight','bold');
