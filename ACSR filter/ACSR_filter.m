@@ -116,11 +116,10 @@ end
 
 end
 
-function [a1,b1,a,b,c] = ACSR_computation(in,mag)
+function [a1,b1] = ACSR_computation(in,mag)
     a0=real(in);
     b0=imag(in);
     s_a=sign(a0);
-    s_b=sign(b0);
 
     p0=atan2(b0,a0);
     m0=sqrt(a0.^2+b0.^2);
@@ -133,8 +132,5 @@ function [a1,b1,a,b,c] = ACSR_computation(in,mag)
 
     a1=s_a*sqrt((m1.^2)/(1+ratio.^2));
     b1=a1*ratio;
-    p1=atan2(b1,a1);
-    a=p0;
-    b=p1;
-    c=p0-p1;
+
 end
